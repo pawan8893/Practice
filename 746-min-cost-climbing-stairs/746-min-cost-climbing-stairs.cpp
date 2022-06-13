@@ -1,4 +1,7 @@
 class Solution {
+    
+    // RECURSIVE APPROACH
+    
     int solve(vector<int>& cost,int n){
         
         if(n==0){
@@ -12,6 +15,9 @@ class Solution {
         int ans=cost[n]+min(solve(cost,n-1),solve(cost,n-2));
         return ans;
     }
+    
+    
+    // RECURSION + MEMOIZATION
     
     int solve2(vector<int>& cost,int n,vector<int>& dp){
          if(n==0){
@@ -29,6 +35,8 @@ class Solution {
         return dp[n];
     }
     
+    // TABULATION
+    
     int solve3(vector<int>& cost,int n){
         vector<int> dp(n+1);
         
@@ -41,6 +49,8 @@ class Solution {
         return min(dp[n-1],dp[n-2]);
         
     }
+    
+    // SPACE OPTIMIZATION
     
     int solve4(vector<int>& cost,int n){
         int prev1=cost[1];
