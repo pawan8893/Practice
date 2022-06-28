@@ -17,7 +17,7 @@ public:
         
         string ans;
         
-        for(string it:v){
+        for(auto it:v){
             ans +=it;
         }
         ans.pop_back();
