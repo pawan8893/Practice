@@ -11,14 +11,14 @@ public:
         for(int i=0;i<s.length();i++){
             string word;
             
-            if(s[i]==' '){
+            if(s[i]==' '){   //skip spaces
                 continue;
             }
-            while(i<s.length() && s[i] !=' '){
+            while(i<s.length() && s[i] !=' '){   //store continuous letters into word
                 word += s[i];
                 i++;
             }
-            st.push(word);
+            st.push(word);       // push the word to the stack
         }
         
         
