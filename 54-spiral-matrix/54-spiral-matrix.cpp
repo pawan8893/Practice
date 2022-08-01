@@ -9,45 +9,39 @@ public:
         int count=0;
         int total=row*col;
         
-        //index initialization
+        
+        //Index Initialization
+        
         int startingRow=0;
-        int startingCol=0;
         int endingRow=row-1;
+        int startingCol=0;
         int endingCol=col-1;
         
-        while (count<total)
-        {
-            //Printing first row
+        while(count<total){
             
-            for(int index=startingCol; count<total && index<=endingCol;index++)
-            {
+            // Printing the first row
+            for(int index=startingCol; count<total && index<=endingCol;index++){
                 ans.push_back(matrix[startingRow][index]);
                 count++;
             }
             startingRow++;
             
-            //Printing ending column
-            
-            for(int index=startingRow; count<total && index<=endingRow ;index++)
-            {
+            // Printing the last column
+            for(int index=startingRow; count<total && index<=endingRow; index++){
                 ans.push_back(matrix[index][endingCol]);
                 count++;
             }
             endingCol--;
             
-            //printing Ending Row
-            
-            for(int index=endingCol; count<total && index>=startingCol;index--)
-            {
+            // Printing the last row
+            for(int index=endingCol; count<total && index>=startingCol; index--){
                 ans.push_back(matrix[endingRow][index]);
                 count++;
             }
             endingRow--;
             
-            //Print starting column
-            
-            for(int index=endingRow;count<total && index>=startingRow; index--)
-            {
+            // Printing the first column
+            for(int index=endingRow; count<total && index>=startingRow; index--){
                 ans.push_back(matrix[index][startingCol]);
                 count++;
             }
