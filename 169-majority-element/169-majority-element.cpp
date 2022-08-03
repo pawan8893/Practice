@@ -1,6 +1,10 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
+        
+        
+        //  TC -- > O(n), SC--> O(1)
+        
         unordered_map<int,int> count;
         int n=nums.size();
         int len=n/2;
