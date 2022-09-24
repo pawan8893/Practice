@@ -1,6 +1,27 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
+        
+        int count=0;
+        int n=s.size();
+        for(int i=n-1;i>=0;i--){
+            if(s[i]==' '){
+                continue;
+            }
+            
+            while(i>=0 && s[i]!=' '){
+                count +=1;
+                i--;
+            }
+            break;
+        }
+        return count;
+    }
+};
+
+/*
+
+int lengthOfLastWord(string s) {
         string ans;
         stack<string> st;
         
@@ -19,7 +40,8 @@ public:
         
         return st.top().size();
     }
-};
+
+*/
 
 
 /*
