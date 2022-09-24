@@ -2,6 +2,10 @@ class Solution {
 public:
     int lengthOfLastWord(string s) {
         
+        
+        // TC -> O(n)
+        // SC -> O(1)
+        
         int count=0;
         int n=s.size();
         for(int i=n-1;i>=0;i--){
@@ -20,6 +24,9 @@ public:
 };
 
 /*
+
+     TC -> O(n)
+     SC -> O(n)
 
 int lengthOfLastWord(string s) {
         string ans;
@@ -47,6 +54,9 @@ int lengthOfLastWord(string s) {
 /*
 
 2nd Approach
+
+    TC -> O(n)
+    SC -> O(n)
 
 
 class Solution {
