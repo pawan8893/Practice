@@ -9,9 +9,9 @@ public:
             mpp[heights[i]]=names[i];
         }
         
-        sort(heights.begin(),heights.end());
+        sort(heights.rbegin(),heights.rend());
         
-        for(int i=heights.size()-1;i>=0;i--){
+        for(int i=0;i<heights.size();i++){
             ans.push_back(mpp[heights[i]]);
         }
         
